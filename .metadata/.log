@@ -98,3 +98,12 @@ java.io.IOException: Cannot run program "g++": Launching failed
 
 !ENTRY org.eclipse.cdt.core 1 0 2022-11-23 20:37:06.539
 !MESSAGE Indexed '7' (13 sources, 291 headers) in 13.6 sec: 22,322 declarations; 31,425 references; 0 unresolved inclusions; 0 syntax errors; 67 unresolved names (0.12%)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-23 22:21:53.997
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-23 22:21:53.997
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-23 22:21:53.998
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType

@@ -38,8 +38,6 @@ const int parserMinErrors = 2;
 
 static uint32_t lastActionTime = 0;
 
-
-
 // These defines control which detailed M409 requests will be sent
 // If one of the fields in the disabled ones need to be fetched the
 // corresponding define has to be set to (1)

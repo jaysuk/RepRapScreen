@@ -38,6 +38,19 @@ const int parserMinErrors = 2;
 
 static uint32_t lastActionTime = 0;
 
+struct HostFirmwareType
+{
+	const char* _ecv_array const name;
+	FirmwareFeatureMap features;
+};
+
+const HostFirmwareType firmwareTypes[] =
+{
+	{ "RepRapFirmware", FirmwareFeatureMap::MakeFromRaw(1 << quoteFilenames) },
+	{ "Smoothie", 		FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+	{ "Repetier", 		FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) },
+	{ "Marlin",			FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) }
+};
 
 
 // These defines control which detailed M409 requests will be sent

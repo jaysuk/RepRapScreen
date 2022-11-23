@@ -1229,3 +1229,702 @@ cc1plus.exe: warning: unrecognized command line option '-Wno-virtual-dtor'
 [armeabi] SharedLibrary  : ../libs/armeabi/libzkgui.so
 
 [armeabi] Install        : libzkgui.so => libs/armeabi/libzkgui.so
+22:19:21 **** Incremental Build of configuration Debug for project 7 ****
+make -j4 all 
+[armeabi] GCC            : arm-flythings-eabi-gcc
+[armeabi] Compile++      : activity/gcodeActivity.cpp
+In file included from activity/gcodeActivity.cpp:18:0:
+./logic/gcodeLogic.cc:92:14: error: 'ColourScheme' does not name a type
+ static const ColourScheme *colours = &colourSchemes[0];
+              ^
+./logic/gcodeLogic.cc:94:8: error: 'Alert' does not name a type
+ static Alert currentAlert;
+        ^
+./logic/gcodeLogic.cc:97:8: error: 'OM' does not name a type
+ static OM::PrinterStatus status = OM::PrinterStatus::connecting;
+        ^
+./logic/gcodeLogic.cc: In function 'bool ongcodeActivityTouchEvent(const MotionEvent&)':
+./logic/gcodeLogic.cc:343:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: In function 'bool onUI_Timer(int)':
+./logic/gcodeLogic.cc:358:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: At global scope:
+./logic/gcodeLogic.cc:39:17: warning: 'lastActionTime' defined but not used [-Wunused-variable]
+ static uint32_t lastActionTime = 0;
+                 ^
+./logic/gcodeLogic.cc:59:17: warning: 'lastTouchTime' defined but not used [-Wunused-variable]
+ static uint32_t lastTouchTime;
+                 ^
+./logic/gcodeLogic.cc:61:17: warning: 'lastPollTime' defined but not used [-Wunused-variable]
+ static uint32_t lastPollTime = 0;
+                 ^
+./logic/gcodeLogic.cc:62:17: warning: 'lastResponseTime' defined but not used [-Wunused-variable]
+ static uint32_t lastResponseTime = 0;
+                 ^
+./logic/gcodeLogic.cc:63:17: warning: 'lastOutOfBufferResponse' defined but not used [-Wunused-variable]
+ static uint32_t lastOutOfBufferResponse = 0;
+                 ^
+./logic/gcodeLogic.cc:65:16: warning: 'oobCounter' defined but not used [-Wunused-variable]
+ static uint8_t oobCounter = 0;
+                ^
+./logic/gcodeLogic.cc:66:13: warning: 'outOfBuffers' defined but not used [-Wunused-variable]
+ static bool outOfBuffers = false;
+             ^
+./logic/gcodeLogic.cc:70:13: warning: 'screensaverActive' defined but not used [-Wunused-variable]
+ static bool screensaverActive = false;      // true if screensaver is active
+             ^
+./logic/gcodeLogic.cc:71:13: warning: 'isDelta' defined but not used [-Wunused-variable]
+ static bool isDelta = false;
+             ^
+./logic/gcodeLogic.cc:74:16: warning: 'beepFrequency' defined but not used [-Wunused-variable]
+ static int32_t beepFrequency = 0;
+                ^
+./logic/gcodeLogic.cc:75:16: warning: 'beepLength' defined but not used [-Wunused-variable]
+ static int32_t beepLength = 0;
+                ^
+./logic/gcodeLogic.cc:77:17: warning: 'messageSeq' defined but not used [-Wunused-variable]
+ static uint32_t messageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:78:17: warning: 'newMessageSeq' defined but not used [-Wunused-variable]
+ static uint32_t newMessageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:80:17: warning: 'fileSize' defined but not used [-Wunused-variable]
+ static uint32_t fileSize = 0;
+                 ^
+./logic/gcodeLogic.cc:81:16: warning: 'visibleAxesCounted' defined but not used [-Wunused-variable]
+ static uint8_t visibleAxesCounted = 0;
+                ^
+./logic/gcodeLogic.cc:83:15: warning: 'lastBed' defined but not used [-Wunused-variable]
+ static int8_t lastBed = -1;
+               ^
+./logic/gcodeLogic.cc:84:15: warning: 'lastChamber' defined but not used [-Wunused-variable]
+ static int8_t lastChamber = -1;
+               ^
+./logic/gcodeLogic.cc:85:15: warning: 'lastSpindle' defined but not used [-Wunused-variable]
+ static int8_t lastSpindle = -1;
+               ^
+./logic/gcodeLogic.cc:86:15: warning: 'lastTool' defined but not used [-Wunused-variable]
+ static int8_t lastTool = -1;
+               ^
+./logic/gcodeLogic.cc:87:17: warning: 'remoteUpTime' defined but not used [-Wunused-variable]
+ static uint32_t remoteUpTime = 0;
+                 ^
+./logic/gcodeLogic.cc:88:13: warning: 'initialized' defined but not used [-Wunused-variable]
+ static bool initialized = false;
+             ^
+./logic/gcodeLogic.cc:89:14: warning: 'pollIntervalMultiplier' defined but not used [-Wunused-variable]
+ static float pollIntervalMultiplier = 1.0;
+              ^
+./logic/gcodeLogic.cc:90:17: warning: 'printerPollInterval' defined but not used [-Wunused-variable]
+ static uint32_t printerPollInterval = defaultPrinterPollInterval;
+                 ^
+./logic/gcodeLogic.cc:324:13: warning: 'bool onmainActivityTouchEvent(const MotionEvent&)' defined but not used [-Wunused-function]
+ static bool onmainActivityTouchEvent(const MotionEvent &ev) {
+             ^
+./logic/gcodeLogic.cc:340:12: warning: 'timea' defined but not used [-Wunused-variable]
+ static int timea = 0;
+            ^
+cc1plus.exe: warning: unrecognized command line option '-Wno-virtual-dtor'
+make: *** [../obj/./activity/gcodeActivity.o] Error 1
+22:19:53 **** Incremental Build of configuration Debug for project 7 ****
+make -j4 all 
+[armeabi] GCC            : arm-flythings-eabi-gcc
+[armeabi] Compile++      : activity/gcodeActivity.cpp
+In file included from activity/gcodeActivity.cpp:18:0:
+./logic/gcodeLogic.cc: In function 'bool ongcodeActivityTouchEvent(const MotionEvent&)':
+./logic/gcodeLogic.cc:336:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: In function 'bool onUI_Timer(int)':
+./logic/gcodeLogic.cc:351:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: At global scope:
+./logic/gcodeLogic.cc:39:17: warning: 'lastActionTime' defined but not used [-Wunused-variable]
+ static uint32_t lastActionTime = 0;
+                 ^
+./logic/gcodeLogic.cc:59:17: warning: 'lastTouchTime' defined but not used [-Wunused-variable]
+ static uint32_t lastTouchTime;
+                 ^
+./logic/gcodeLogic.cc:61:17: warning: 'lastPollTime' defined but not used [-Wunused-variable]
+ static uint32_t lastPollTime = 0;
+                 ^
+./logic/gcodeLogic.cc:62:17: warning: 'lastResponseTime' defined but not used [-Wunused-variable]
+ static uint32_t lastResponseTime = 0;
+                 ^
+./logic/gcodeLogic.cc:63:17: warning: 'lastOutOfBufferResponse' defined but not used [-Wunused-variable]
+ static uint32_t lastOutOfBufferResponse = 0;
+                 ^
+./logic/gcodeLogic.cc:65:16: warning: 'oobCounter' defined but not used [-Wunused-variable]
+ static uint8_t oobCounter = 0;
+                ^
+./logic/gcodeLogic.cc:66:13: warning: 'outOfBuffers' defined but not used [-Wunused-variable]
+ static bool outOfBuffers = false;
+             ^
+./logic/gcodeLogic.cc:70:13: warning: 'screensaverActive' defined but not used [-Wunused-variable]
+ static bool screensaverActive = false;      // true if screensaver is active
+             ^
+./logic/gcodeLogic.cc:71:13: warning: 'isDelta' defined but not used [-Wunused-variable]
+ static bool isDelta = false;
+             ^
+./logic/gcodeLogic.cc:74:16: warning: 'beepFrequency' defined but not used [-Wunused-variable]
+ static int32_t beepFrequency = 0;
+                ^
+./logic/gcodeLogic.cc:75:16: warning: 'beepLength' defined but not used [-Wunused-variable]
+ static int32_t beepLength = 0;
+                ^
+./logic/gcodeLogic.cc:77:17: warning: 'messageSeq' defined but not used [-Wunused-variable]
+ static uint32_t messageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:78:17: warning: 'newMessageSeq' defined but not used [-Wunused-variable]
+ static uint32_t newMessageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:80:17: warning: 'fileSize' defined but not used [-Wunused-variable]
+ static uint32_t fileSize = 0;
+                 ^
+./logic/gcodeLogic.cc:81:16: warning: 'visibleAxesCounted' defined but not used [-Wunused-variable]
+ static uint8_t visibleAxesCounted = 0;
+                ^
+./logic/gcodeLogic.cc:83:15: warning: 'lastBed' defined but not used [-Wunused-variable]
+ static int8_t lastBed = -1;
+               ^
+./logic/gcodeLogic.cc:84:15: warning: 'lastChamber' defined but not used [-Wunused-variable]
+ static int8_t lastChamber = -1;
+               ^
+./logic/gcodeLogic.cc:85:15: warning: 'lastSpindle' defined but not used [-Wunused-variable]
+ static int8_t lastSpindle = -1;
+               ^
+./logic/gcodeLogic.cc:86:15: warning: 'lastTool' defined but not used [-Wunused-variable]
+ static int8_t lastTool = -1;
+               ^
+./logic/gcodeLogic.cc:87:17: warning: 'remoteUpTime' defined but not used [-Wunused-variable]
+ static uint32_t remoteUpTime = 0;
+                 ^
+./logic/gcodeLogic.cc:88:13: warning: 'initialized' defined but not used [-Wunused-variable]
+ static bool initialized = false;
+             ^
+./logic/gcodeLogic.cc:89:14: warning: 'pollIntervalMultiplier' defined but not used [-Wunused-variable]
+ static float pollIntervalMultiplier = 1.0;
+              ^
+./logic/gcodeLogic.cc:90:17: warning: 'printerPollInterval' defined but not used [-Wunused-variable]
+ static uint32_t printerPollInterval = defaultPrinterPollInterval;
+                 ^
+./logic/gcodeLogic.cc:317:13: warning: 'bool onmainActivityTouchEvent(const MotionEvent&)' defined but not used [-Wunused-function]
+ static bool onmainActivityTouchEvent(const MotionEvent &ev) {
+             ^
+./logic/gcodeLogic.cc:333:12: warning: 'timea' defined but not used [-Wunused-variable]
+ static int timea = 0;
+            ^
+cc1plus.exe: warning: unrecognized command line option '-Wno-virtual-dtor'
+[armeabi] SharedLibrary  : ../libs/armeabi/libzkgui.so
+
+[armeabi] Install        : libzkgui.so => libs/armeabi/libzkgui.so
+22:20:24 **** Incremental Build of configuration Debug for project 7 ****
+make -j4 all 
+[armeabi] GCC            : arm-flythings-eabi-gcc
+[armeabi] Compile++      : activity/gcodeActivity.cpp
+In file included from activity/gcodeActivity.cpp:18:0:
+./logic/gcodeLogic.cc: In function 'bool ongcodeActivityTouchEvent(const MotionEvent&)':
+./logic/gcodeLogic.cc:482:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: In function 'bool onUI_Timer(int)':
+./logic/gcodeLogic.cc:497:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: At global scope:
+./logic/gcodeLogic.cc:39:17: warning: 'lastActionTime' defined but not used [-Wunused-variable]
+ static uint32_t lastActionTime = 0;
+                 ^
+./logic/gcodeLogic.cc:59:17: warning: 'lastTouchTime' defined but not used [-Wunused-variable]
+ static uint32_t lastTouchTime;
+                 ^
+./logic/gcodeLogic.cc:61:17: warning: 'lastPollTime' defined but not used [-Wunused-variable]
+ static uint32_t lastPollTime = 0;
+                 ^
+./logic/gcodeLogic.cc:62:17: warning: 'lastResponseTime' defined but not used [-Wunused-variable]
+ static uint32_t lastResponseTime = 0;
+                 ^
+./logic/gcodeLogic.cc:63:17: warning: 'lastOutOfBufferResponse' defined but not used [-Wunused-variable]
+ static uint32_t lastOutOfBufferResponse = 0;
+                 ^
+./logic/gcodeLogic.cc:65:16: warning: 'oobCounter' defined but not used [-Wunused-variable]
+ static uint8_t oobCounter = 0;
+                ^
+./logic/gcodeLogic.cc:66:13: warning: 'outOfBuffers' defined but not used [-Wunused-variable]
+ static bool outOfBuffers = false;
+             ^
+./logic/gcodeLogic.cc:70:13: warning: 'screensaverActive' defined but not used [-Wunused-variable]
+ static bool screensaverActive = false;      // true if screensaver is active
+             ^
+./logic/gcodeLogic.cc:71:13: warning: 'isDelta' defined but not used [-Wunused-variable]
+ static bool isDelta = false;
+             ^
+./logic/gcodeLogic.cc:74:16: warning: 'beepFrequency' defined but not used [-Wunused-variable]
+ static int32_t beepFrequency = 0;
+                ^
+./logic/gcodeLogic.cc:75:16: warning: 'beepLength' defined but not used [-Wunused-variable]
+ static int32_t beepLength = 0;
+                ^
+./logic/gcodeLogic.cc:77:17: warning: 'messageSeq' defined but not used [-Wunused-variable]
+ static uint32_t messageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:78:17: warning: 'newMessageSeq' defined but not used [-Wunused-variable]
+ static uint32_t newMessageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:80:17: warning: 'fileSize' defined but not used [-Wunused-variable]
+ static uint32_t fileSize = 0;
+                 ^
+./logic/gcodeLogic.cc:81:16: warning: 'visibleAxesCounted' defined but not used [-Wunused-variable]
+ static uint8_t visibleAxesCounted = 0;
+                ^
+./logic/gcodeLogic.cc:83:15: warning: 'lastBed' defined but not used [-Wunused-variable]
+ static int8_t lastBed = -1;
+               ^
+./logic/gcodeLogic.cc:84:15: warning: 'lastChamber' defined but not used [-Wunused-variable]
+ static int8_t lastChamber = -1;
+               ^
+./logic/gcodeLogic.cc:85:15: warning: 'lastSpindle' defined but not used [-Wunused-variable]
+ static int8_t lastSpindle = -1;
+               ^
+./logic/gcodeLogic.cc:86:15: warning: 'lastTool' defined but not used [-Wunused-variable]
+ static int8_t lastTool = -1;
+               ^
+./logic/gcodeLogic.cc:87:17: warning: 'remoteUpTime' defined but not used [-Wunused-variable]
+ static uint32_t remoteUpTime = 0;
+                 ^
+./logic/gcodeLogic.cc:88:13: warning: 'initialized' defined but not used [-Wunused-variable]
+ static bool initialized = false;
+             ^
+./logic/gcodeLogic.cc:89:14: warning: 'pollIntervalMultiplier' defined but not used [-Wunused-variable]
+ static float pollIntervalMultiplier = 1.0;
+              ^
+./logic/gcodeLogic.cc:90:17: warning: 'printerPollInterval' defined but not used [-Wunused-variable]
+ static uint32_t printerPollInterval = defaultPrinterPollInterval;
+                 ^
+./logic/gcodeLogic.cc:262:24: warning: 'fieldTable' defined but not used [-Wunused-variable]
+ static FieldTableEntry fieldTable[] =
+                        ^
+./logic/gcodeLogic.cc:463:13: warning: 'bool onmainActivityTouchEvent(const MotionEvent&)' defined but not used [-Wunused-function]
+ static bool onmainActivityTouchEvent(const MotionEvent &ev) {
+             ^
+./logic/gcodeLogic.cc:479:12: warning: 'timea' defined but not used [-Wunused-variable]
+ static int timea = 0;
+            ^
+cc1plus.exe: warning: unrecognized command line option '-Wno-virtual-dtor'
+[armeabi] SharedLibrary  : ../libs/armeabi/libzkgui.so
+
+[armeabi] Install        : libzkgui.so => libs/armeabi/libzkgui.so
+22:21:30 **** Incremental Build of configuration Debug for project 7 ****
+make -j4 all 
+[armeabi] GCC            : arm-flythings-eabi-gcc
+[armeabi] Compile++      : activity/gcodeActivity.cpp
+In file included from activity/gcodeActivity.cpp:18:0:
+./logic/gcodeLogic.cc:43:14: error: expected ';' at end of member declaration
+  const char* _ecv_array const name;
+              ^
+./logic/gcodeLogic.cc:43:31: error: 'name' does not name a type
+  const char* _ecv_array const name;
+                               ^
+./logic/gcodeLogic.cc:44:2: error: 'FirmwareFeatureMap' does not name a type
+  FirmwareFeatureMap features;
+  ^
+./logic/gcodeLogic.cc:49:22: error: 'FirmwareFeatureMap' has not been declared
+  { "RepRapFirmware", FirmwareFeatureMap::MakeFromRaw(1 << quoteFilenames) },
+                      ^
+./logic/gcodeLogic.cc:49:59: error: 'quoteFilenames' was not declared in this scope
+  { "RepRapFirmware", FirmwareFeatureMap::MakeFromRaw(1 << quoteFilenames) },
+                                                           ^
+./logic/gcodeLogic.cc:50:18: error: 'FirmwareFeatureMap' has not been declared
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                  ^
+./logic/gcodeLogic.cc:50:55: error: 'noGcodesFolder' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                       ^
+./logic/gcodeLogic.cc:50:77: error: 'noStandbyTemps' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                                             ^
+./logic/gcodeLogic.cc:50:99: error: 'noG10Temps' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                                                                   ^
+./logic/gcodeLogic.cc:50:117: error: 'noDriveNumber' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                                                                                     ^
+./logic/gcodeLogic.cc:50:138: error: 'noM20M36' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                                                                                                          ^
+./logic/gcodeLogic.cc:51:18: error: 'FirmwareFeatureMap' has not been declared
+  { "Repetier",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) },
+                  ^
+./logic/gcodeLogic.cc:51:55: error: 'noGcodesFolder' was not declared in this scope
+  { "Repetier",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) },
+                                                       ^
+./logic/gcodeLogic.cc:51:77: error: 'noStandbyTemps' was not declared in this scope
+  { "Repetier",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) },
+                                                                             ^
+./logic/gcodeLogic.cc:51:99: error: 'noG10Temps' was not declared in this scope
+  { "Repetier",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) },
+                                                                                                   ^
+./logic/gcodeLogic.cc:52:16: error: 'FirmwareFeatureMap' has not been declared
+  { "Marlin",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) }
+                ^
+./logic/gcodeLogic.cc:52:53: error: 'noGcodesFolder' was not declared in this scope
+  { "Marlin",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) }
+                                                     ^
+./logic/gcodeLogic.cc:52:75: error: 'noStandbyTemps' was not declared in this scope
+  { "Marlin",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) }
+                                                                           ^
+./logic/gcodeLogic.cc:52:97: error: 'noG10Temps' was not declared in this scope
+  { "Marlin",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) }
+                                                                                                 ^
+./logic/gcodeLogic.cc:53:1: error: too many initializers for 'const HostFirmwareType'
+ };
+ ^
+./logic/gcodeLogic.cc:53:1: error: too many initializers for 'const HostFirmwareType'
+./logic/gcodeLogic.cc:53:1: error: too many initializers for 'const HostFirmwareType'
+./logic/gcodeLogic.cc:53:1: error: too many initializers for 'const HostFirmwareType'
+./logic/gcodeLogic.cc: In function 'bool ongcodeActivityTouchEvent(const MotionEvent&)':
+./logic/gcodeLogic.cc:497:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: In function 'bool onUI_Timer(int)':
+./logic/gcodeLogic.cc:512:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: At global scope:
+./logic/gcodeLogic.cc:39:17: warning: 'lastActionTime' defined but not used [-Wunused-variable]
+ static uint32_t lastActionTime = 0;
+                 ^
+./logic/gcodeLogic.cc:74:17: warning: 'lastTouchTime' defined but not used [-Wunused-variable]
+ static uint32_t lastTouchTime;
+                 ^
+./logic/gcodeLogic.cc:76:17: warning: 'lastPollTime' defined but not used [-Wunused-variable]
+ static uint32_t lastPollTime = 0;
+                 ^
+./logic/gcodeLogic.cc:77:17: warning: 'lastResponseTime' defined but not used [-Wunused-variable]
+ static uint32_t lastResponseTime = 0;
+                 ^
+./logic/gcodeLogic.cc:78:17: warning: 'lastOutOfBufferResponse' defined but not used [-Wunused-variable]
+ static uint32_t lastOutOfBufferResponse = 0;
+                 ^
+./logic/gcodeLogic.cc:80:16: warning: 'oobCounter' defined but not used [-Wunused-variable]
+ static uint8_t oobCounter = 0;
+                ^
+./logic/gcodeLogic.cc:81:13: warning: 'outOfBuffers' defined but not used [-Wunused-variable]
+ static bool outOfBuffers = false;
+             ^
+./logic/gcodeLogic.cc:85:13: warning: 'screensaverActive' defined but not used [-Wunused-variable]
+ static bool screensaverActive = false;      // true if screensaver is active
+             ^
+./logic/gcodeLogic.cc:86:13: warning: 'isDelta' defined but not used [-Wunused-variable]
+ static bool isDelta = false;
+             ^
+./logic/gcodeLogic.cc:89:16: warning: 'beepFrequency' defined but not used [-Wunused-variable]
+ static int32_t beepFrequency = 0;
+                ^
+./logic/gcodeLogic.cc:90:16: warning: 'beepLength' defined but not used [-Wunused-variable]
+ static int32_t beepLength = 0;
+                ^
+./logic/gcodeLogic.cc:92:17: warning: 'messageSeq' defined but not used [-Wunused-variable]
+ static uint32_t messageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:93:17: warning: 'newMessageSeq' defined but not used [-Wunused-variable]
+ static uint32_t newMessageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:95:17: warning: 'fileSize' defined but not used [-Wunused-variable]
+ static uint32_t fileSize = 0;
+                 ^
+./logic/gcodeLogic.cc:96:16: warning: 'visibleAxesCounted' defined but not used [-Wunused-variable]
+ static uint8_t visibleAxesCounted = 0;
+                ^
+./logic/gcodeLogic.cc:98:15: warning: 'lastBed' defined but not used [-Wunused-variable]
+ static int8_t lastBed = -1;
+               ^
+./logic/gcodeLogic.cc:99:15: warning: 'lastChamber' defined but not used [-Wunused-variable]
+ static int8_t lastChamber = -1;
+               ^
+./logic/gcodeLogic.cc:100:15: warning: 'lastSpindle' defined but not used [-Wunused-variable]
+ static int8_t lastSpindle = -1;
+               ^
+./logic/gcodeLogic.cc:101:15: warning: 'lastTool' defined but not used [-Wunused-variable]
+ static int8_t lastTool = -1;
+               ^
+./logic/gcodeLogic.cc:102:17: warning: 'remoteUpTime' defined but not used [-Wunused-variable]
+ static uint32_t remoteUpTime = 0;
+                 ^
+./logic/gcodeLogic.cc:103:13: warning: 'initialized' defined but not used [-Wunused-variable]
+ static bool initialized = false;
+             ^
+./logic/gcodeLogic.cc:104:14: warning: 'pollIntervalMultiplier' defined but not used [-Wunused-variable]
+ static float pollIntervalMultiplier = 1.0;
+              ^
+./logic/gcodeLogic.cc:105:17: warning: 'printerPollInterval' defined but not used [-Wunused-variable]
+ static uint32_t printerPollInterval = defaultPrinterPollInterval;
+                 ^
+./logic/gcodeLogic.cc:277:24: warning: 'fieldTable' defined but not used [-Wunused-variable]
+ static FieldTableEntry fieldTable[] =
+                        ^
+./logic/gcodeLogic.cc:478:13: warning: 'bool onmainActivityTouchEvent(const MotionEvent&)' defined but not used [-Wunused-function]
+ static bool onmainActivityTouchEvent(const MotionEvent &ev) {
+             ^
+./logic/gcodeLogic.cc:494:12: warning: 'timea' defined but not used [-Wunused-variable]
+ static int timea = 0;
+            ^
+cc1plus.exe: warning: unrecognized command line option '-Wno-virtual-dtor'
+make: *** [../obj/./activity/gcodeActivity.o] Error 1
+22:22:03 **** Incremental Build of configuration Debug for project 7 ****
+make -j4 all 
+[armeabi] GCC            : arm-flythings-eabi-gcc
+[armeabi] Compile++      : activity/gcodeActivity.cpp
+In file included from activity/gcodeActivity.cpp:18:0:
+./logic/gcodeLogic.cc:43:14: error: expected ';' at end of member declaration
+  const char* _ecv_array const name;
+              ^
+./logic/gcodeLogic.cc:43:31: error: 'name' does not name a type
+  const char* _ecv_array const name;
+                               ^
+./logic/gcodeLogic.cc:44:2: error: 'FirmwareFeatureMap' does not name a type
+  FirmwareFeatureMap features;
+  ^
+./logic/gcodeLogic.cc:49:22: error: 'FirmwareFeatureMap' has not been declared
+  { "RepRapFirmware", FirmwareFeatureMap::MakeFromRaw(1 << quoteFilenames) },
+                      ^
+./logic/gcodeLogic.cc:49:59: error: 'quoteFilenames' was not declared in this scope
+  { "RepRapFirmware", FirmwareFeatureMap::MakeFromRaw(1 << quoteFilenames) },
+                                                           ^
+./logic/gcodeLogic.cc:50:18: error: 'FirmwareFeatureMap' has not been declared
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                  ^
+./logic/gcodeLogic.cc:50:55: error: 'noGcodesFolder' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                       ^
+./logic/gcodeLogic.cc:50:77: error: 'noStandbyTemps' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                                             ^
+./logic/gcodeLogic.cc:50:99: error: 'noG10Temps' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                                                                   ^
+./logic/gcodeLogic.cc:50:117: error: 'noDriveNumber' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                                                                                     ^
+./logic/gcodeLogic.cc:50:138: error: 'noM20M36' was not declared in this scope
+  { "Smoothie",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps | 1 << noDriveNumber | 1 << noM20M36) },
+                                                                                                                                          ^
+./logic/gcodeLogic.cc:51:18: error: 'FirmwareFeatureMap' has not been declared
+  { "Repetier",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) },
+                  ^
+./logic/gcodeLogic.cc:51:55: error: 'noGcodesFolder' was not declared in this scope
+  { "Repetier",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) },
+                                                       ^
+./logic/gcodeLogic.cc:51:77: error: 'noStandbyTemps' was not declared in this scope
+  { "Repetier",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) },
+                                                                             ^
+./logic/gcodeLogic.cc:51:99: error: 'noG10Temps' was not declared in this scope
+  { "Repetier",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) },
+                                                                                                   ^
+./logic/gcodeLogic.cc:52:16: error: 'FirmwareFeatureMap' has not been declared
+  { "Marlin",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) }
+                ^
+./logic/gcodeLogic.cc:52:53: error: 'noGcodesFolder' was not declared in this scope
+  { "Marlin",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) }
+                                                     ^
+./logic/gcodeLogic.cc:52:75: error: 'noStandbyTemps' was not declared in this scope
+  { "Marlin",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) }
+                                                                           ^
+./logic/gcodeLogic.cc:52:97: error: 'noG10Temps' was not declared in this scope
+  { "Marlin",   FirmwareFeatureMap::MakeFromRaw(1 << noGcodesFolder | 1 << noStandbyTemps | 1 << noG10Temps) }
+                                                                                                 ^
+./logic/gcodeLogic.cc:53:1: error: too many initializers for 'const HostFirmwareType'
+ };
+ ^
+./logic/gcodeLogic.cc:53:1: error: too many initializers for 'const HostFirmwareType'
+./logic/gcodeLogic.cc:53:1: error: too many initializers for 'const HostFirmwareType'
+./logic/gcodeLogic.cc:53:1: error: too many initializers for 'const HostFirmwareType'
+./logic/gcodeLogic.cc: In function 'bool ongcodeActivityTouchEvent(const MotionEvent&)':
+./logic/gcodeLogic.cc:497:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: In function 'bool onUI_Timer(int)':
+./logic/gcodeLogic.cc:512:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: At global scope:
+./logic/gcodeLogic.cc:39:17: warning: 'lastActionTime' defined but not used [-Wunused-variable]
+ static uint32_t lastActionTime = 0;
+                 ^
+./logic/gcodeLogic.cc:74:17: warning: 'lastTouchTime' defined but not used [-Wunused-variable]
+ static uint32_t lastTouchTime;
+                 ^
+./logic/gcodeLogic.cc:76:17: warning: 'lastPollTime' defined but not used [-Wunused-variable]
+ static uint32_t lastPollTime = 0;
+                 ^
+./logic/gcodeLogic.cc:77:17: warning: 'lastResponseTime' defined but not used [-Wunused-variable]
+ static uint32_t lastResponseTime = 0;
+                 ^
+./logic/gcodeLogic.cc:78:17: warning: 'lastOutOfBufferResponse' defined but not used [-Wunused-variable]
+ static uint32_t lastOutOfBufferResponse = 0;
+                 ^
+./logic/gcodeLogic.cc:80:16: warning: 'oobCounter' defined but not used [-Wunused-variable]
+ static uint8_t oobCounter = 0;
+                ^
+./logic/gcodeLogic.cc:81:13: warning: 'outOfBuffers' defined but not used [-Wunused-variable]
+ static bool outOfBuffers = false;
+             ^
+./logic/gcodeLogic.cc:85:13: warning: 'screensaverActive' defined but not used [-Wunused-variable]
+ static bool screensaverActive = false;      // true if screensaver is active
+             ^
+./logic/gcodeLogic.cc:86:13: warning: 'isDelta' defined but not used [-Wunused-variable]
+ static bool isDelta = false;
+             ^
+./logic/gcodeLogic.cc:89:16: warning: 'beepFrequency' defined but not used [-Wunused-variable]
+ static int32_t beepFrequency = 0;
+                ^
+./logic/gcodeLogic.cc:90:16: warning: 'beepLength' defined but not used [-Wunused-variable]
+ static int32_t beepLength = 0;
+                ^
+./logic/gcodeLogic.cc:92:17: warning: 'messageSeq' defined but not used [-Wunused-variable]
+ static uint32_t messageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:93:17: warning: 'newMessageSeq' defined but not used [-Wunused-variable]
+ static uint32_t newMessageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:95:17: warning: 'fileSize' defined but not used [-Wunused-variable]
+ static uint32_t fileSize = 0;
+                 ^
+./logic/gcodeLogic.cc:96:16: warning: 'visibleAxesCounted' defined but not used [-Wunused-variable]
+ static uint8_t visibleAxesCounted = 0;
+                ^
+./logic/gcodeLogic.cc:98:15: warning: 'lastBed' defined but not used [-Wunused-variable]
+ static int8_t lastBed = -1;
+               ^
+./logic/gcodeLogic.cc:99:15: warning: 'lastChamber' defined but not used [-Wunused-variable]
+ static int8_t lastChamber = -1;
+               ^
+./logic/gcodeLogic.cc:100:15: warning: 'lastSpindle' defined but not used [-Wunused-variable]
+ static int8_t lastSpindle = -1;
+               ^
+./logic/gcodeLogic.cc:101:15: warning: 'lastTool' defined but not used [-Wunused-variable]
+ static int8_t lastTool = -1;
+               ^
+./logic/gcodeLogic.cc:102:17: warning: 'remoteUpTime' defined but not used [-Wunused-variable]
+ static uint32_t remoteUpTime = 0;
+                 ^
+./logic/gcodeLogic.cc:103:13: warning: 'initialized' defined but not used [-Wunused-variable]
+ static bool initialized = false;
+             ^
+./logic/gcodeLogic.cc:104:14: warning: 'pollIntervalMultiplier' defined but not used [-Wunused-variable]
+ static float pollIntervalMultiplier = 1.0;
+              ^
+./logic/gcodeLogic.cc:105:17: warning: 'printerPollInterval' defined but not used [-Wunused-variable]
+ static uint32_t printerPollInterval = defaultPrinterPollInterval;
+                 ^
+./logic/gcodeLogic.cc:277:24: warning: 'fieldTable' defined but not used [-Wunused-variable]
+ static FieldTableEntry fieldTable[] =
+                        ^
+./logic/gcodeLogic.cc:478:13: warning: 'bool onmainActivityTouchEvent(const MotionEvent&)' defined but not used [-Wunused-function]
+ static bool onmainActivityTouchEvent(const MotionEvent &ev) {
+             ^
+./logic/gcodeLogic.cc:494:12: warning: 'timea' defined but not used [-Wunused-variable]
+ static int timea = 0;
+            ^
+cc1plus.exe: warning: unrecognized command line option '-Wno-virtual-dtor'
+make: *** [../obj/./activity/gcodeActivity.o] Error 1
+22:22:57 **** Incremental Build of configuration Debug for project 7 ****
+make -j4 all 
+[armeabi] GCC            : arm-flythings-eabi-gcc
+[armeabi] Compile++      : activity/gcodeActivity.cpp
+In file included from activity/gcodeActivity.cpp:18:0:
+./logic/gcodeLogic.cc: In function 'bool ongcodeActivityTouchEvent(const MotionEvent&)':
+./logic/gcodeLogic.cc:484:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: In function 'bool onUI_Timer(int)':
+./logic/gcodeLogic.cc:499:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: At global scope:
+./logic/gcodeLogic.cc:39:17: warning: 'lastActionTime' defined but not used [-Wunused-variable]
+ static uint32_t lastActionTime = 0;
+                 ^
+./logic/gcodeLogic.cc:61:17: warning: 'lastTouchTime' defined but not used [-Wunused-variable]
+ static uint32_t lastTouchTime;
+                 ^
+./logic/gcodeLogic.cc:63:17: warning: 'lastPollTime' defined but not used [-Wunused-variable]
+ static uint32_t lastPollTime = 0;
+                 ^
+./logic/gcodeLogic.cc:64:17: warning: 'lastResponseTime' defined but not used [-Wunused-variable]
+ static uint32_t lastResponseTime = 0;
+                 ^
+./logic/gcodeLogic.cc:65:17: warning: 'lastOutOfBufferResponse' defined but not used [-Wunused-variable]
+ static uint32_t lastOutOfBufferResponse = 0;
+                 ^
+./logic/gcodeLogic.cc:67:16: warning: 'oobCounter' defined but not used [-Wunused-variable]
+ static uint8_t oobCounter = 0;
+                ^
+./logic/gcodeLogic.cc:68:13: warning: 'outOfBuffers' defined but not used [-Wunused-variable]
+ static bool outOfBuffers = false;
+             ^
+./logic/gcodeLogic.cc:72:13: warning: 'screensaverActive' defined but not used [-Wunused-variable]
+ static bool screensaverActive = false;      // true if screensaver is active
+             ^
+./logic/gcodeLogic.cc:73:13: warning: 'isDelta' defined but not used [-Wunused-variable]
+ static bool isDelta = false;
+             ^
+./logic/gcodeLogic.cc:76:16: warning: 'beepFrequency' defined but not used [-Wunused-variable]
+ static int32_t beepFrequency = 0;
+                ^
+./logic/gcodeLogic.cc:77:16: warning: 'beepLength' defined but not used [-Wunused-variable]
+ static int32_t beepLength = 0;
+                ^
+./logic/gcodeLogic.cc:79:17: warning: 'messageSeq' defined but not used [-Wunused-variable]
+ static uint32_t messageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:80:17: warning: 'newMessageSeq' defined but not used [-Wunused-variable]
+ static uint32_t newMessageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:82:17: warning: 'fileSize' defined but not used [-Wunused-variable]
+ static uint32_t fileSize = 0;
+                 ^
+./logic/gcodeLogic.cc:83:16: warning: 'visibleAxesCounted' defined but not used [-Wunused-variable]
+ static uint8_t visibleAxesCounted = 0;
+                ^
+./logic/gcodeLogic.cc:85:15: warning: 'lastBed' defined but not used [-Wunused-variable]
+ static int8_t lastBed = -1;
+               ^
+./logic/gcodeLogic.cc:86:15: warning: 'lastChamber' defined but not used [-Wunused-variable]
+ static int8_t lastChamber = -1;
+               ^
+./logic/gcodeLogic.cc:87:15: warning: 'lastSpindle' defined but not used [-Wunused-variable]
+ static int8_t lastSpindle = -1;
+               ^
+./logic/gcodeLogic.cc:88:15: warning: 'lastTool' defined but not used [-Wunused-variable]
+ static int8_t lastTool = -1;
+               ^
+./logic/gcodeLogic.cc:89:17: warning: 'remoteUpTime' defined but not used [-Wunused-variable]
+ static uint32_t remoteUpTime = 0;
+                 ^
+./logic/gcodeLogic.cc:90:13: warning: 'initialized' defined but not used [-Wunused-variable]
+ static bool initialized = false;
+             ^
+./logic/gcodeLogic.cc:91:14: warning: 'pollIntervalMultiplier' defined but not used [-Wunused-variable]
+ static float pollIntervalMultiplier = 1.0;
+              ^
+./logic/gcodeLogic.cc:92:17: warning: 'printerPollInterval' defined but not used [-Wunused-variable]
+ static uint32_t printerPollInterval = defaultPrinterPollInterval;
+                 ^
+./logic/gcodeLogic.cc:264:24: warning: 'fieldTable' defined but not used [-Wunused-variable]
+ static FieldTableEntry fieldTable[] =
+                        ^
+./logic/gcodeLogic.cc:465:13: warning: 'bool onmainActivityTouchEvent(const MotionEvent&)' defined but not used [-Wunused-function]
+ static bool onmainActivityTouchEvent(const MotionEvent &ev) {
+             ^
+./logic/gcodeLogic.cc:481:12: warning: 'timea' defined but not used [-Wunused-variable]
+ static int timea = 0;
+            ^
+cc1plus.exe: warning: unrecognized command line option '-Wno-virtual-dtor'
+[armeabi] SharedLibrary  : ../libs/armeabi/libzkgui.so
+
+[armeabi] Install        : libzkgui.so => libs/armeabi/libzkgui.so
