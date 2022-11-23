@@ -1,0 +1,100 @@
+!SESSION 2022-11-23 20:24:37.846 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 2 2022-11-23 20:31:38.461
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.base, page: com.android.ide.eclipse.common.preferences.UsagePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-11-23 20:31:38.465
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.PreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-11-23 20:31:38.466
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.LogCatPreferencePage)
+
+!ENTRY org.eclipse.equinox.p2.touchpoint.natives 2 0 2022-11-23 20:34:09.184
+!MESSAGE Could not remove temporary backup directory (it is safe to manually delete it and its contents): C:\Users\live\AppData\Local\Temp\DefaultProfile_3094c654b620_c0a80137d1df
+!SESSION 2022-11-23 20:35:44.382 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data file:/C:/Github/RepRapScreen/
+
+!ENTRY org.eclipse.ui 2 2 2022-11-23 20:35:54.088
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.base, page: com.android.ide.eclipse.common.preferences.UsagePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-11-23 20:35:54.093
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.PreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-11-23 20:35:54.094
+!MESSAGE Invalid preference category path: com.android.ide.eclipse.preferences.main (bundle: com.android.ide.eclipse.ddms, page: com.android.ide.eclipse.ddms.preferences.LogCatPreferencePage)
+
+!ENTRY org.eclipse.cdt.core 4 0 2022-11-23 20:36:52.643
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:208)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:265)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:760)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:690)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:563)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.cdt.core 4 0 2022-11-23 20:36:52.802
+!MESSAGE Error: Cannot run program "g++": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "g++": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:208)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:265)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:760)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:690)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:563)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.cdt.core 4 0 2022-11-23 20:36:52.972
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:208)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:265)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:760)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:690)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:563)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.cdt.core 4 0 2022-11-23 20:36:53.177
+!MESSAGE Error: Cannot run program "g++": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "g++": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:208)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:265)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:760)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:690)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:563)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-23 20:37:06.539
+!MESSAGE Indexed '7' (13 sources, 291 headers) in 13.6 sec: 22,322 declarations; 31,425 references; 0 unresolved inclusions; 0 syntax errors; 67 unresolved names (0.12%)

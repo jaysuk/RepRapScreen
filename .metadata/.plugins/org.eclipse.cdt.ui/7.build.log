@@ -1,0 +1,96 @@
+22:15:20 **** Incremental Build of configuration Debug for project 7 ****
+make -j4 all 
+[armeabi] GCC            : arm-flythings-eabi-gcc
+[armeabi] Compile++      : activity/gcodeActivity.cpp
+In file included from activity/gcodeActivity.cpp:18:0:
+./logic/gcodeLogic.cc: In function 'bool ongcodeActivityTouchEvent(const MotionEvent&)':
+./logic/gcodeLogic.cc:175:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: In function 'bool onUI_Timer(int)':
+./logic/gcodeLogic.cc:190:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+./logic/gcodeLogic.cc: At global scope:
+./logic/gcodeLogic.cc:39:17: warning: 'lastActionTime' defined but not used [-Wunused-variable]
+ static uint32_t lastActionTime = 0;
+                 ^
+./logic/gcodeLogic.cc:59:17: warning: 'lastTouchTime' defined but not used [-Wunused-variable]
+ static uint32_t lastTouchTime;
+                 ^
+./logic/gcodeLogic.cc:61:17: warning: 'lastPollTime' defined but not used [-Wunused-variable]
+ static uint32_t lastPollTime = 0;
+                 ^
+./logic/gcodeLogic.cc:62:17: warning: 'lastResponseTime' defined but not used [-Wunused-variable]
+ static uint32_t lastResponseTime = 0;
+                 ^
+./logic/gcodeLogic.cc:63:17: warning: 'lastOutOfBufferResponse' defined but not used [-Wunused-variable]
+ static uint32_t lastOutOfBufferResponse = 0;
+                 ^
+./logic/gcodeLogic.cc:65:16: warning: 'oobCounter' defined but not used [-Wunused-variable]
+ static uint8_t oobCounter = 0;
+                ^
+./logic/gcodeLogic.cc:66:13: warning: 'outOfBuffers' defined but not used [-Wunused-variable]
+ static bool outOfBuffers = false;
+             ^
+./logic/gcodeLogic.cc:70:13: warning: 'screensaverActive' defined but not used [-Wunused-variable]
+ static bool screensaverActive = false;      // true if screensaver is active
+             ^
+./logic/gcodeLogic.cc:71:13: warning: 'isDelta' defined but not used [-Wunused-variable]
+ static bool isDelta = false;
+             ^
+./logic/gcodeLogic.cc:74:16: warning: 'beepFrequency' defined but not used [-Wunused-variable]
+ static int32_t beepFrequency = 0;
+                ^
+./logic/gcodeLogic.cc:75:16: warning: 'beepLength' defined but not used [-Wunused-variable]
+ static int32_t beepLength = 0;
+                ^
+./logic/gcodeLogic.cc:77:17: warning: 'messageSeq' defined but not used [-Wunused-variable]
+ static uint32_t messageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:78:17: warning: 'newMessageSeq' defined but not used [-Wunused-variable]
+ static uint32_t newMessageSeq = 0;
+                 ^
+./logic/gcodeLogic.cc:80:17: warning: 'fileSize' defined but not used [-Wunused-variable]
+ static uint32_t fileSize = 0;
+                 ^
+./logic/gcodeLogic.cc:81:16: warning: 'visibleAxesCounted' defined but not used [-Wunused-variable]
+ static uint8_t visibleAxesCounted = 0;
+                ^
+./logic/gcodeLogic.cc:83:15: warning: 'lastBed' defined but not used [-Wunused-variable]
+ static int8_t lastBed = -1;
+               ^
+./logic/gcodeLogic.cc:84:15: warning: 'lastChamber' defined but not used [-Wunused-variable]
+ static int8_t lastChamber = -1;
+               ^
+./logic/gcodeLogic.cc:85:15: warning: 'lastSpindle' defined but not used [-Wunused-variable]
+ static int8_t lastSpindle = -1;
+               ^
+./logic/gcodeLogic.cc:86:15: warning: 'lastTool' defined but not used [-Wunused-variable]
+ static int8_t lastTool = -1;
+               ^
+./logic/gcodeLogic.cc:87:17: warning: 'remoteUpTime' defined but not used [-Wunused-variable]
+ static uint32_t remoteUpTime = 0;
+                 ^
+./logic/gcodeLogic.cc:88:13: warning: 'initialized' defined but not used [-Wunused-variable]
+ static bool initialized = false;
+             ^
+./logic/gcodeLogic.cc:89:14: warning: 'pollIntervalMultiplier' defined but not used [-Wunused-variable]
+ static float pollIntervalMultiplier = 1.0;
+              ^
+./logic/gcodeLogic.cc:90:17: warning: 'printerPollInterval' defined but not used [-Wunused-variable]
+ static uint32_t printerPollInterval = defaultPrinterPollInterval;
+                 ^
+./logic/gcodeLogic.cc:156:13: warning: 'bool onmainActivityTouchEvent(const MotionEvent&)' defined but not used [-Wunused-function]
+ static bool onmainActivityTouchEvent(const MotionEvent &ev) {
+             ^
+./logic/gcodeLogic.cc:172:12: warning: 'timea' defined but not used [-Wunused-variable]
+ static int timea = 0;
+            ^
+cc1plus.exe: warning: unrecognized command line option '-Wno-virtual-dtor'
+[armeabi] SharedLibrary  : ../libs/armeabi/libzkgui.so
+
+[armeabi] Install        : libzkgui.so => libs/armeabi/libzkgui.so
+
+22:15:22 Build Finished. 0 errors, 27 warnings. (took 1s.687ms)
+
