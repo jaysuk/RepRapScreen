@@ -16,12 +16,31 @@
 #include "os/MountMonitor.h"
 #include <algorithm>
 #include "json/json.h"
+#include <ObjectModel/PrinterStatus.hpp>
+//#include "evc.h"
+
+#define ARRAY_SIZE(arr) (sizeof(arr)/sizeof(arr[0]))
 
 void Hardware_serial_transmission(const std::string& data) ;
 
 /**
  * 当界面构造时触发
  */
+
+#define DEBUG	(0) // 0: off, 1: MessageLog, 2: Uart
+#include "Debug.hpp"
+
+#define DEBUG2	(0) // 0: off, 1: DebugField
+#if (DEBUG2)
+
+#define STRINGIFY(x)	#x
+#define TOSTRING(x)	STRINGIFY(x)
+#define dbg2(fmt, args...)		debugField->SetValue(TOSTRING(__LINE__)); debugField->Refresh(true, 0, 0)
+
+#else
+#define dbg2(fmt, args...)		do {} while(0)
+
+#endif
 
 // Controlling constants
 const uint32_t defaultPrinterPollInterval = 500;	// poll interval in milliseconds
@@ -37,8 +56,6 @@ const uint32_t repeatTouchDelay = 100;				// how long we ignore new touches whil
 const int parserMinErrors = 2;
 
 static uint32_t lastActionTime = 0;
-
-
 
 // These defines control which detailed M409 requests will be sent
 // If one of the fields in the disabled ones need to be fetched the
@@ -399,6 +416,161 @@ static FieldTableEntry fieldTable[] =
 	{ rcvControlCommand,				"controlCommand" },
 };
 
+
+enum SeqState {
+	SeqStateInit,
+	SeqStateOk,
+	SeqStateUpdate,
+	SeqStateError,
+	SeqStateDisabled
+};
+
+static struct Seq {
+	const ReceivedDataEvent event;
+	const ReceivedDataEvent seqid;
+
+	uint16_t lastSeq;
+	enum SeqState state;
+
+	const char * const key;
+	const char * const flags;
+} seqs[] = {
+#if FETCH_NETWORK
+	{ .event = rcvOMKeyNetwork, .seqid = rcvSeqsNetwork, .lastSeq = 0, .state = SeqStateInit, .key = "network", .flags = "v" },
+#endif
+#if FETCH_BOARDS
+	{ .event = rcvOMKeyBoards, .seqid = rcvSeqsBoards, .lastSeq = 0, .state = SeqStateInit, .key = "boards", .flags = "v" },
+#endif
+#if FETCH_MOVE
+	{ .event = rcvOMKeyMove, .seqid = rcvSeqsMove, .lastSeq = 0, .state = SeqStateInit, .key = "move", .flags = "v" },
+#endif
+#if FETCH_HEAT
+	{ .event = rcvOMKeyHeat, .seqid = rcvSeqsHeat, .lastSeq = 0, .state = SeqStateInit, .key = "heat", .flags = "v" },
+#endif
+#if FETCH_TOOLS
+	{ .event = rcvOMKeyTools, .seqid = rcvSeqsTools, .lastSeq = 0, .state = SeqStateInit, .key = "tools", .flags = "v" },
+#endif
+#if FETCH_SPINDLES
+	{ .event = rcvOMKeySpindles, .seqid = rcvSeqsSpindles, .lastSeq = 0, .state = SeqStateInit, .key = "spindles", .flags = "v" },
+#endif
+#if FETCH_DIRECTORIES
+	{ .event = rcvOMKeyDirectories, .seqid = rcvSeqsDirectories, .lastSeq = 0, .state = SeqStateInit, .key = "directories", .flags = "v" },
+#endif
+#if FETCH_FANS
+	{ .event = rcvOMKeyFans, .seqid = rcvSeqsFans, .lastSeq = 0, .state = SeqStateInit, .key = "fans", .flags = "v" },
+#endif
+#if FETCH_INPUTS
+	{ .event = rcvOMKeyInputs, .seqid = rcvSeqsInputs, .lastSeq = 0, .state = SeqStateInit, .key = "inputs", .flags = "v" },
+#endif
+#if FETCH_JOB
+	{ .event = rcvOMKeyJob, .seqid = rcvSeqsJob, .lastSeq = 0, .state = SeqStateInit, .key = "job", .flags = "v" },
+#endif
+#if FETCH_SCANNER
+	{ .event = rcvOMKeyScanner, .seqid = rcvSeqsScanner, .lastSeq = 0, .state = SeqStateInit, .key = "scanner", .flags = "v" },
+#endif
+#if FETCH_SENSORS
+	{ .event = rcvOMKeySensors, .seqid = rcvSeqsSensors, .lastSeq = 0, .state = SeqStateInit, .key = "sensors", .flags = "v" },
+#endif
+#if FETCH_STATE
+	{ .event = rcvOMKeyState, .seqid = rcvSeqsState, .lastSeq = 0, .state = SeqStateInit, .key = "state", .flags = "vn" },
+#endif
+#if FETCH_VOLUMES
+	{ .event = rcvOMKeyVolumes, .seqid = rcvSeqsVolumes, .lastSeq = 0, .state = SeqStateInit, .key = "volumes", .flags = "v" },
+#endif
+};
+
+static struct Seq *currentReqSeq = NULL;
+static struct Seq *currentRespSeq = NULL;
+
+static struct Seq* GetNextSeq(struct Seq *current)
+{
+	if (current == NULL)
+	{
+		current = seqs;
+	}
+
+
+	for (size_t i = current - seqs; i < ARRAY_SIZE(seqs); ++i)
+	{
+		current = &seqs[i];
+		if (current->state == SeqStateError)
+		{
+			// skip and re-init if last request had an error
+			current->state = SeqStateInit;
+			continue;
+		}
+		if (current->state == SeqStateInit || current->state == SeqStateUpdate)
+		{
+			return current;
+		}
+	}
+
+
+	return NULL;
+}
+
+static struct Seq *FindSeqByKey(const char *key)
+{
+	dbg("key %s\n", key);
+
+	for (size_t i = 0; i < ARRAY_SIZE(seqs); ++i)
+	{
+		if (strcasecmp(seqs[i].key, key) == 0)
+		{
+			return &seqs[i];
+		}
+
+	}
+
+	return NULL;
+}
+
+static void UpdateSeq(const ReceivedDataEvent seqid, int32_t val)
+{
+	for (size_t i = 0; i < ARRAY_SIZE(seqs); ++i)
+	{
+		if (seqs[i].seqid == seqid)
+		{
+			if (seqs[i].lastSeq != val)
+			{
+				dbg("%s %d -> %d\n", seqs[i].key, seqs[i].lastSeq, val);
+				seqs[i].lastSeq = val;
+				seqs[i].state = SeqStateUpdate;
+			}
+		}
+	}
+}
+
+static void ResetSeqs()
+{
+	for (size_t i = 0; i < ARRAY_SIZE(seqs); ++i)
+	{
+		seqs[i].lastSeq = 0;
+		seqs[i].state = SeqStateInit;
+	}
+}
+
+struct FileList
+{
+	int listNumber;
+	size_t scrollOffset;
+	String<100> path;
+};
+
+void Delay(uint32_t milliSeconds)
+{
+	const uint32_t now = SystemTick::GetTickCount();
+	while (SystemTick::GetTickCount() - now < milliSeconds) { }
+}
+
+bool IsPrintingStatus(OM::PrinterStatus status)
+{
+	return status == OM::PrinterStatus::printing
+			|| status == OM::PrinterStatus::paused
+			|| status == OM::PrinterStatus::pausing
+			|| status == OM::PrinterStatus::resuming
+			|| status == OM::PrinterStatus::simulating;
+}
 
 static void onUI_init(){
     //Tips :添加 UI初始化的显示代码到这里,如:mText1Ptr->setText("123");
